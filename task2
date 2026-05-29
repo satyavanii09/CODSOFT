@@ -1,12 +1,15 @@
-#Password generator
+#calculator
+num1 = float(input("Enter first number: "))
+num2 = float(input("Enter second number: "))
+op = input("Enter operation (+, -, *, /): ")
 
-import random
-import string
-
-length = int(input("Enter password length: "))
-
-characters = string.ascii_letters + string.digits + string.punctuation
-
-password = ''.join(random.choice(characters) for i in range(length))
-
-print("Generated Password:", password)
+if op == "+":
+    print(num1 + num2)
+elif op == "-":
+    print(num1 - num2)
+elif op == "*":
+    print(num1 * num2)
+elif op == "/":
+    print(num1 / num2)
+else:
+    print("Invalid operation")
